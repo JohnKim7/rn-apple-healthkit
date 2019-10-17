@@ -7,7 +7,7 @@ A React Native bridge module for interacting with Apple Healthkit data. Checkout
 Install the [rn-apple-healthkit] package from npm:
 
 - Run `npm install rn-apple-healthkit --save`
-- Run `react-native link rn-apple-healthkit`
+- Run `cd ios && pod install`
 
 Update `info.plist` in your React Native project
 ```
@@ -16,17 +16,6 @@ Update `info.plist` in your React Native project
 <key>NSHealthUpdateUsageDescription</key>
 <string>Share workout data with other apps.</string>
 ```
-
-## Manual Installation
-
-1. Run `npm install rn-apple-healthkit --save`
-2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-3. Go to `node_modules` ➜ `rn-apple-healthkit` and add `RCTAppleHealthkit.xcodeproj`
-4. In XCode, in the project navigator, select your project. Add `libRCTAppleHealthkit.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-5. Click `RCTAppleHealthkit.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). In the `Search Paths` section, look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../../react-native/React` and `$(SRCROOT)/../../../React` - mark both as `recursive`.
-6. Enable Healthkit in your application's `Capabilities`
-![](https://i.imgur.com/eOCCCyv.png "Xcode Capabilities Section")
-7. Compile and run
 
 ## Get Started
 Initialize Healthkit. This will show the Healthkit permissions prompt for any read/write permissions set in the required `options` object.
